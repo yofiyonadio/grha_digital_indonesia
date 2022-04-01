@@ -4,14 +4,26 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: node_bayaria_api
-    image: node_bayaria_api
+    container_name: nodejs_gdi
+    image: nodejs_gdi
     restart: "no"
     ports:
       - "3320:3320"
     networks:
-      - bayaria_network
-    command: bash -c "npm run build:docker && cd build && node app/server.js"
+      - gdi_network
+    depends_on:
+      - db
+    command: bash -c "npm run build:docker && cd build && node server.js"
+  db:
+    container_name: postgres_kriya
+    image: postgres:13.3
+    restart: "no"
+    environment:
+      POSTGRES_PASSWORD: 713320
+    ports:
+      - "7133:5432"
+    networks:
+      - gdi_network
 networks:
-  bayaria_network:
-    name: bayaria_network
+  gdi_network:
+    name: gdi_network

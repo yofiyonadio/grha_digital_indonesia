@@ -1,6 +1,6 @@
 FROM node:12.22.5
 
-WORKDIR /app
+WORKDIR /appSSS
 
 COPY package.json .
 
