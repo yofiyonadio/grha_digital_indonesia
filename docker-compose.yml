@@ -15,7 +15,7 @@ services:
       - db
     command: bash -c "npm run build:docker && cd build && node server.js"
   db:
-    container_name: postgres_kriya
+    container_name: postgres_gdi
     image: postgres:13.3
     restart: "no"
     environment:
