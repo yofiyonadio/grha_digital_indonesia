@@ -1,0 +1,7 @@
+{
+    "events": {
+        "restart": "npx kill-port 3320",
+        "crash": "npx kill-port 3320"
+      },
+    "delay": "500"
+}

@@ -1,0 +1,1 @@
+export type http_method = 'POST' | 'GET' | 'PUT' | 'DELETE'

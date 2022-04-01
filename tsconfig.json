@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./build",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "moduleResolution": "node",
+    "lib": [
+      "ES2020"
+    ],
+    "baseUrl": "./app",
+    "paths": {
+      "*": [
+        "./node_modules/@types/*",
+        "*"
+      ]
+    },
+  },
+  "exclude": [
+    "node_modules",
+  ],
+  "include": [
+    "app/**/*.ts"
+  ]
+}
